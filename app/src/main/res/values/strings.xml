@@ -1,0 +1,32 @@
+<resources>
+    <!-- login & register variable -->
+    <string name="app_name">Catifi</string>
+    <string name="login">Login</string>
+    <string name="email_label">YOUR EMAIL</string>
+    <string name="email_input">EMAIL</string>
+    <string name="password_label">PASSWORD</string>
+    <string name="dont_have_account">Don\'t Have an Account?</string>
+    <string name="gender">Gender</string>
+    <string name="name">Name</string>
+    <string name="photo">Photo</string>
+    <string name="signup">Signup</string>
+    <string name="gender_prompt">Choose a Gender</string>
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <!-- profile activity -->
+    <string name="title_activity_profile">profile</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Yarden Hatol</string>
+    <string name="nav_header_subtitle">yarden_hatol@catifi2019.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
