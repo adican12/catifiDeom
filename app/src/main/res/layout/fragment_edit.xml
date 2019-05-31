@@ -1,12 +1,159 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_edit"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.catifidemo.catifidemo.EditFragment">
-    <TextView
+
+    <ScrollView
+        android:id="@+id/scroll_edit"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Edit Fragment"
-        android:textSize="25sp" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Edit_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:text="@string/Edit"
+                android:textColor="@android:color/black"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/edit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:text="@string/name"
+                tools:style="@style/label_style" />
+
+            <EditText
+                android:id="@+id/edit_input_name"
+                tools:style="@style/input_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="200dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:lineSpacingExtra="8sp"
+                android:text="@string/name"
+                android:textCursorDrawable="@android:color/transparent"
+                android:importantForAutofill="no" />
+
+            <TextView
+                android:id="@+id/Edit_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:text="@string/email_label"
+                tools:style="@style/label_style" />
+
+            <EditText
+                android:id="@+id/edit_input_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textWebEmailAddress"
+                android:text="@string/email_input"
+                tools:style="@style/input_style"
+                android:importantForAutofill="no" />
+
+            <TextView
+                android:id="@+id/Edit_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:text="@string/password_label"
+                tools:style="@style/label_style" />
+
+            <EditText
+                android:id="@+id/edit_input_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:text="@string/password_label"
+                tools:style="@style/input_style"
+                android:importantForAutofill="no"/>
+
+            <TextView
+                android:id="@+id/edit_birthdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:text="@string/birthdate"
+                tools:style="@style/label_style" />
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/edti_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:text="@string/gender"
+                tools:style="@style/label_style" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/edit_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:text="@string/Phone"
+                tools:style="@style/label_style" />
+
+            <EditText
+                android:id="@+id/edit_input_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@string/Phone"
+                tools:style="@style/input_style"
+                android:importantForAutofill="no"/>
+
+            <TextView
+                android:id="@+id/edit_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:text="@string/Category"
+                tools:style="@style/label_style" />
+
+            <EditText
+                android:id="@+id/edit_input_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:text="@string/Category"
+                tools:style="@style/input_style"
+                android:importantForAutofill="no"/>
+
+            <Button
+                android:id="@+id/edit_button_update"
+                style="@style/button_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:text="@string/update" />
+        </LinearLayout>
+    </ScrollView>
+
 </FrameLayout>

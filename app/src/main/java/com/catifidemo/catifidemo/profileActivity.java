@@ -1,5 +1,6 @@
 package com.catifidemo.catifidemo;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.wifi.WifiConfiguration;
@@ -19,12 +20,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.List;
 
 public class profileActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     Fragment frag= null;
+    users active_u;
+    TextView user_name,user_mail;
+    View headerView;
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +41,10 @@ public class profileActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Log.d("myapp","profileActivity start");
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,7 +56,7 @@ public class profileActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame, new MainFragment() ); // replace a Fragment with Frame Layout
+        transaction.replace(R.id.frame, new MainFragment()); // replace a Fragment with Frame Layout
         transaction.commit(); // commit the changes
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -54,6 +66,24 @@ public class profileActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        headerView = navigationView.getHeaderView(0);
+
+
+        user_name=(TextView)headerView.findViewById(R.id.user_name);
+        user_mail=(TextView)headerView.findViewById(R.id.user_mail);
+
+        active_u=  (users) getIntent().getSerializableExtra("users");
+
+        Log.d("myapp", "name: " + active_u.getName() );
+        Log.d("myapp", "mail: " + active_u.getEmail() );
+
+        Log.d("myapp "," before ");
+
+        user_name.setText(active_u.getName() );
+        user_mail.setText(active_u.getEmail() );
+
+        Log.d("myapp "," after ");
+
     }
 
     @Override
@@ -147,7 +177,7 @@ public class profileActivity extends AppCompatActivity
     }
 
 
-    public void get_Wifi_status(View view){
+    protected void get_Wifi_status(View view){
         String status="";
         Log.d("myapp","get_Wifi_status function");
 //        Connect_to_wifi(Context);
@@ -156,7 +186,7 @@ public class profileActivity extends AppCompatActivity
 
 
 
-    public void Connect_to_wifi(){
+    protected void Connect_to_wifi(){
         String networkSSID = "N&C.ltd";
         String networkPass = "049896970adi";
 

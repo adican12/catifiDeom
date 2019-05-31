@@ -2,7 +2,7 @@
     <!-- login & register variable -->
     <string name="app_name">Catifi</string>
     <string name="login">Login</string>
-    <string name="email_label">YOUR EMAIL</string>
+    <string name="email_label">EMAIL</string>
     <string name="email_input">EMAIL</string>
     <string name="password_label">PASSWORD</string>
     <string name="dont_have_account">Don\'t Have an Account?</string>
@@ -10,6 +10,9 @@
     <string name="name">Name</string>
     <string name="photo">Photo</string>
     <string name="signup">Signup</string>
+    <string name="birthdate">Birthdate</string>
+    <string name="Category">Category</string>
+    <string name="Phone">Phone</string>
     <string name="gender_prompt">Choose a Gender</string>
     <string-array name="gender_array">
         <item>Male</item>
@@ -24,6 +27,19 @@
     <string name="nav_header_subtitle">yarden_hatol@catifi2019.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Menu -->
+    <string name="Wifi">Wifi Connect</string>
+    <string name="Edit">Edit Profile</string>
+    <string name="Advertise">Advertise</string>
+    <string name="Coupons">Coupons</string>
+    <string name="Tools">Tools</string>
+    <string name="Communicate">Communicate</string>
+    <string name="Share">Share</string>
+    <string name="Feedback">Feedback</string>
+
+    <!-- fragment EDIT-->
+    <string name="update">Update</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
